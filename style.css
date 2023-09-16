@@ -6,4 +6,235 @@
   --lightGrayishCyan: hsl(185, 41%, 84%);
   --veryLightGrayishCyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --fontSize: 24px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightGrayishCyan);
+  gap: 4rem;
+}
+
+/* Title */
+h2 {
+  color: var(--veryDarkCyan);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: var(--fontSize);
+}
+
+h2 span {
+  display: block;
+}
+
+/* Main */
+main {
+  background-color: var(--white);
+  border-radius: 20px;
+  max-width: 800px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+main #main-left p,
+label {
+  color: gray;
+}
+
+main #main-left,
+main #main-right {
+  display: flex;
+  flex-direction: column;
+}
+
+main #main-left {
+  gap: 2rem;
+}
+
+main #main-left input {
+  margin-top: 0.3rem;
+  text-align: end;
+  border: transparent;
+  background: var(--veryLightGrayishCyan);
+  padding: 0.5rem 0.4rem;
+  cursor: pointer;
+}
+
+main #main-left input:focus {
+  outline: none;
+}
+
+main #main-left input:focus {
+  border: 1px solid var(--strongCyan);
+}
+
+#bill,
+#number-people {
+  display: flex;
+  position: relative;
+}
+
+#bill input,
+#number-people input {
+  flex: 1;
+  color: var(--veryDarkCyan);
+}
+
+#bill img,
+#number-people img {
+  position: absolute;
+  top: 15px;
+  left: 1rem;
+}
+
+main #main-left-middle .percentage-choice {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+main #main-left-middle p {
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  background-color: var(--veryDarkCyan);
+  color: var(--white);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+}
+
+.button.active {
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+}
+
+main #main-left-middle input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+main #main-left #main-left-bottom p {
+  font-size: 13px;
+}
+
+main #main-left #main-left-bottom #people-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main #main-right {
+  gap: 3rem;
+  padding: 2rem;
+  background-color: var(--veryDarkCyan);
+  border-radius: 10px;
+}
+
+main #main-right-top,
+main #main-right-middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tip-person {
+  font-size: 13px;
+  color: var(--white);
+}
+
+.person {
+  color: var(--white);
+  font-size: 10px;
+  opacity: 0.4;
+}
+
+.total-tip {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 30px;
+  color: var(--StrongCyan);
+}
+
+#main-right #button-reset {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+#button-reset:hover {
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+}
+
+#button-reset.active {
+  background-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+}
+
+@media all and (max-width: 800px) {
+  h2 {
+    padding-top: 4rem;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 480px) {
+  #main-left,
+  #main-right {
+    width: 100%;
+  }
+
+  main #main-left-middle .percentage-choice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  main #main-left-middle input,
+  .button {
+    width: 45%;
+    padding: 10px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  main #main-left-middle input,
+  .button {
+    width: 100%;
+  }
 }
