@@ -83,6 +83,13 @@ main #main-left input:focus {
   border: 1px solid var(--strongCyan);
 }
 
+#bill-label,
+#tip-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #bill,
 #number-people {
   display: flex;
