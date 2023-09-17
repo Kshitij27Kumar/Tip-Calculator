@@ -188,7 +188,7 @@ main #main-right-middle {
   align-items: center;
   position: relative;
   font-size: 30px;
-  color: var(--StrongCyan);
+  color: var(--strongCyan);
 }
 
 #main-right #button-reset {
